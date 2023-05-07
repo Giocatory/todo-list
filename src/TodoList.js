@@ -14,23 +14,30 @@ class TodoList extends Component {
         this.deleteItem = this.deleteItem.bind(this);
     }
 
-    addItem(e){
-        let itemArray = this.state.items;
-
-        if(this._inputElement.value !== ""){
-            itemArray.unshift({
-                text: this._inputElement.value,
-                key: Date.now()
-            });
-
-            this.setState({
-                items: itemArray
-            });
-        }
-        console.log(itemArray);
-
+    addItem(e) {
         e.preventDefault();
-    }
+      
+        const newItemText = this._inputElement.value.trim();
+        if (!newItemText) {
+          return;
+        }
+      
+        const newItemKey = Date.now();
+        const newItem = { text: newItemText, key: newItemKey };
+        const items = this.state.items;
+      
+        if (items.some(item => item.text === newItem.text)) {
+          alert('Такая задача уже существует!');
+          return;
+        }
+      
+        this.setState({
+          items: [newItem, ...items],
+        });
+      
+        this._inputElement.value = '';
+      }
+      
 
     deleteItem(key){
         let filteredItems = this.state.items.filter(

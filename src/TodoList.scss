@@ -1,11 +1,16 @@
 .todoListMain{
-
+    
     & .header{
         input{
             padding: 10px;
             font-size: 16px;
             border: 2px solid #FFF;
             width: 165px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
         }
 
         button{
@@ -15,6 +20,11 @@
             margin-right: 0px;
             background-color: #0066ff;
             color: #FFF;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
             border: 2px solid #0066ff;
 
             &:hover{
