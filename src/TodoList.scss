@@ -1,6 +1,6 @@
 .todoListMain{
 
-    &.header{
+    & .header{
         input{
             padding: 10px;
             font-size: 16px;
@@ -25,7 +25,7 @@
         }
     }
 
-    &.theList{
+    & .theList{
         list-style: none;
         padding-left: 0;
         width: 250px;
@@ -50,6 +50,6 @@
                 background-color: pink;
                 cursor: pointer;
             }
-}
+        }
     }
 }
